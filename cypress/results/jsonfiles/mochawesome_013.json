@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-01-21T06:53:45.870Z",
+    "end": "2022-01-21T06:54:34.148Z",
+    "duration": 48278,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "33b13bd2-dc8a-454b-b295-e8f7ab5862fb",
+      "title": "",
+      "fullFile": "cypress/integration/campgroundTesting/loginValidation.js",
+      "file": "cypress/integration/campgroundTesting/loginValidation.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "211cc8c6-6a2d-4dcc-89b6-e04946b822dd",
+          "title": "Login validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login with incorrect password",
+              "fullTitle": "Login validation Login with incorrect password",
+              "timedOut": null,
+              "duration": 8321,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "frontPage.clickViewCampgroundBtn();\nnavbar.clickOnLoginBtn();\nloginPage.enterUserName(globalThis.data.username);\nloginPage.enterPassword(globalThis.data.incorrect_password);\nloginPage.clickOnLoginBtn(false);\nloginPage.validateWarningMsg(globalThis.data.incorrectCredentials);\nloginPage.closeMsg();",
+              "err": {},
+              "uuid": "a52da044-8c8e-4b97-ad2a-67af232cae7f",
+              "parentUUID": "211cc8c6-6a2d-4dcc-89b6-e04946b822dd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with correct password",
+              "fullTitle": "Login validation Login with correct password",
+              "timedOut": null,
+              "duration": 10697,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "frontPage.clickViewCampgroundBtn();\nnavbar.clickOnLoginBtn();\nloginPage.enterUserName(globalThis.data.username);\nloginPage.enterPassword(globalThis.data.password);\nloginPage.clickOnLoginBtn(true);\nloginPage.validateWarningMsg(globalThis.data.welcomeMsg);\nloginPage.closeMsg();\nnavbar.clickOnLogoutBtn();\nloginPage.validateWarningMsg(globalThis.data.logoutMsg);\nloginPage.closeMsg();",
+              "err": {},
+              "uuid": "1880b87d-dbd3-4df3-977e-990ba3938a3a",
+              "parentUUID": "211cc8c6-6a2d-4dcc-89b6-e04946b822dd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login without entering credentials",
+              "fullTitle": "Login validation Login without entering credentials",
+              "timedOut": null,
+              "duration": 3920,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "frontPage.clickLoginTab();\nloginPage.clickOnLoginBtn(false);\nloginPage.validateLoginPage();\nloginPage.validateWarningMsg(globalThis.data.missingCredentials);\nloginPage.closeMsg();",
+              "err": {},
+              "uuid": "9e80f1e1-2823-4f83-8cd7-1e9dc3451b6b",
+              "parentUUID": "211cc8c6-6a2d-4dcc-89b6-e04946b822dd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Adding and deleting a review",
+              "fullTitle": "Login validation Adding and deleting a review",
+              "timedOut": null,
+              "duration": 22290,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const testComment = Cypress.currentTest.title + \" \" + Math.floor(Math.random() * 1000) + 1;\nfrontPage.clickLoginTab();\nloginPage.enterUserName(globalThis.data.username);\nloginPage.enterPassword(globalThis.data.password);\nloginPage.clickOnLoginBtn(true);\nhomePage.validateHomePage();\nhomePage.clickIndividualCampground();\nshowPage.getTotalReviews();\nshowPage.giveRating(globalThis.data.testRating3);\nshowPage.enterComments(testComment);\nshowPage.submitReview();\nshowPage.validateWarningMsg(globalThis.data.reviewAdded);\nshowPage.closeMsg();\nshowPage.reviewCountValidation('greater');\nshowPage.validateAddedReview(globalThis.data.testRating3, testComment);\nshowPage.deleteReview(testComment);\nshowPage.validateWarningMsg(globalThis.data.reviewDeleted);\nshowPage.closeMsg();\nshowPage.reviewCountValidation('equal');\nshowPage.validateDeletedReview(globalThis.data.testRating3, testComment);\nnavbar.clickOnLogoutBtn();",
+              "err": {},
+              "uuid": "1fd4aa40-8fa2-4d9f-b726-7161704beb2e",
+              "parentUUID": "211cc8c6-6a2d-4dcc-89b6-e04946b822dd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a52da044-8c8e-4b97-ad2a-67af232cae7f",
+            "1880b87d-dbd3-4df3-977e-990ba3938a3a",
+            "9e80f1e1-2823-4f83-8cd7-1e9dc3451b6b",
+            "1fd4aa40-8fa2-4d9f-b726-7161704beb2e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 45228,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results/jsonfiles",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-01-21T06:53:24.797Z",
+    "end": "2022-01-21T06:53:37.677Z",
+    "duration": 12880,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "06cfaf1f-e242-4970-a2aa-4c1b167b700a",
+      "title": "",
+      "fullFile": "cypress/integration/campgroundTesting/basicValidation.js",
+      "file": "cypress/integration/campgroundTesting/basicValidation.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c37be729-6e8a-4048-84c8-ba726adae4c2",
+          "title": "Basic validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "validation of show page without login",
+              "fullTitle": "Basic validation validation of show page without login",
+              "timedOut": null,
+              "duration": 9408,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "frontPage.clickViewCampgroundBtn();\nhomePage.getCampgroundTxt();\nhomePage.clickIndividualCampground();\nshowPage.validateCampgroundText();\nshowPage.cannotReviewValidation();\nnavbar.clickOnNewBtn(false);\nloginPage.validateWarningMsg(globalThis.data.mustLoginMsg);\nloginPage.closeMsg();",
+              "err": {},
+              "uuid": "dbbb66c6-77a9-44de-9f89-d1d861388267",
+              "parentUUID": "c37be729-6e8a-4048-84c8-ba726adae4c2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "dbbb66c6-77a9-44de-9f89-d1d861388267"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9408,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results/jsonfiles",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}
