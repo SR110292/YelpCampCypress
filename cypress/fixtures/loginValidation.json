@@ -1,0 +1,13 @@
+{
+  "username": "Surya",
+  "incorrect_password": "November@2",
+  "password": "November@3",
+  "mustLoginMsg": "You must be signed in first",
+  "incorrectCredentials": "Password or username is incorrect",
+  "missingCredentials": "Missing credentials",
+  "welcomeMsg": "Welcome back ",
+  "logoutMsg": "Successfully logged out!",
+  "reviewAdded": "Successfully added the review!",
+  "reviewDeleted": "Successfully deleted the review!",
+  "testRating3": "3"
+}

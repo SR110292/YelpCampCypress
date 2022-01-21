@@ -1,0 +1,24 @@
+{
+  "name": "cypress_revision",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run",
+    "headedTestChrome": "npm run test -- --headed -b chrome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^9.2.0",
+    "cypress-multi-reporters": "^1.5.0",
+    "cypress-xpath": "^1.6.2",
+    "mocha": "^9.1.3",
+    "mocha-junit-reporter": "^2.0.2",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.0.1"
+  }
+}

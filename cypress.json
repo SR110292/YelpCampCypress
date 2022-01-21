@@ -1,0 +1,19 @@
+{
+  "env": {
+    "qa": "http://localhost:8080/",
+    "prod": "https://mighty-sierra-24452.herokuapp.com/"
+  },
+  "projectId": "sgra55",
+  "key": "7b038beb-3e38-454a-b76a-8860d2d9b277",
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/results/jsonfiles",
+    "overwrite": false,
+    "html": false,
+    "json": true
+  },
+  "retries": {
+    "runMode": 2,
+    "openMode": 2
+  }
+}
